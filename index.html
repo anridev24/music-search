@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Search</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="#">
+        <h4>Search for music</h4>
+        <input id="search-query" class="search-input" type="text" placeholder="..." />
+        <button onclick="search()" class="search-button">Search</button>
+      </form>
+      <table class="results-table" id="results-table">
+        <tbody id="results-table-body">
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Little Party</td>
+            <td>Fergie</td>
+            <td>Holy Wood</td>
+            <td><button>+</button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Little Party</td>
+            <td>Fergie</td>
+            <td>Holy Wood</td>
+            <td><button>+</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
