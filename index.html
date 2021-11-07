@@ -9,36 +9,38 @@
   </head>
   <body>
     <div class="wrapper">
-      <form action="#">
+      <!-- Modal  -->
+      <div id="modal-overlay"></div>
+      <div id="modal">
+        <div id="modal-content">
+          <table id="modal-table">
+            <tbody id="modal-table-body"></tbody>
+          </table>
+          <img src="" id="album-image" width="200px" height="auto" alt="No Image For Album" />
+        </div>
+        <div id="modal-footer">
+          <button id="close-modal-button" onclick="destroyModal()">Close</button>
+        </div>
+      </div>
+      <!-- End of Modal -->
+      <div id="form-wrapper" action="#">
         <h4>Search for music</h4>
-        <input id="search-query" class="search-input" type="text" placeholder="..." />
+        <div class="search-form">
+          <input id="search-query" class="search-input" type="text" placeholder="..." />
+          <select onchange="setFilter()" id="filter-input" class="filter-input">
+            <option selected value="">No filter</option>
+            <option value="artist">Artist</option>
+            <option value="title">Title</option>
+            <option value="album">Album</option>
+          </select>
+        </div>
         <button onclick="search()" class="search-button">Search</button>
-      </form>
+        <h5 id="total-results-text"></h5>
+      </div>
       <table class="results-table" id="results-table">
-        <tbody id="results-table-body">
-          <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Action</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Little Party</td>
-            <td>Fergie</td>
-            <td>Holy Wood</td>
-            <td><button>+</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Little Party</td>
-            <td>Fergie</td>
-            <td>Holy Wood</td>
-            <td><button>+</button></td>
-          </tr>
-        </tbody>
+        <tbody id="results-table-body"></tbody>
       </table>
+      <button onclick="loadMore()" id="load-more-button">Load more</button>
     </div>
 
     <script src="./script.js"></script>
